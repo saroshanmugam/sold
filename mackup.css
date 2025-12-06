@@ -1,0 +1,800 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin:0px;
+
+}
+/* ================================================================= */
+
+/* Navbar Container */
+.navbar {
+  width: 100%;
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #050413, #12072a);
+  font-family: "Poppins", sans-serif;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.nav-logo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: gold;
+}
+
+/* Menu List */
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 18px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: gold;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* RESPONSIVE SECTION */
+@media (max-width: 950px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    display: block;
+    background: #0b0620;
+    padding: 20px 0;
+    text-align: center;
+    display: none;
+  }
+
+  .nav-links li {
+    margin: 18px 0;
+  }
+
+  .nav-links li a {
+    font-size: 17px;
+    border: none;
+  }
+
+  /* Show menu when checkbox is checked */
+  #menu-toggle:checked ~ .nav-links {
+    display: block;
+  }
+}
+/* ================================================================= */
+/*
+  Hero setcion
+*/
+/* ================================================================= */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 150px 5% 80px;
+  background: url(image1.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Soft top glow */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 200px;
+  opacity: 0.7;
+}
+
+/* Text Content */
+.hero-content {
+  z-index: 10;
+  max-width: 700px;
+}
+
+.hero-content h2 {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.hero-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.hero-content blockquote {
+  margin: 25px 0;
+  font-size: 20px;
+  font-style: italic;
+  color: #e8d5ff;
+}
+
+/* Button */
+.hero-btn {
+  padding: 12px 30px;
+  background: #d6a7ff;
+  border: none;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background:white;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero-content h2 {
+    font-size: 26px;
+  }
+
+  .brush-left, .brush-right {
+    width: 260px;
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-section {
+    padding-top: 180px;
+  }
+
+  .hero-content h2 {
+    font-size: 22px;
+  }
+
+  .hero-content blockquote {
+    font-size: 18px;
+  }
+
+}
+
+/* ================================================================= */
+/*
+  About setcion
+*/
+/* ================================================================= */
+
+.about-section {
+  position: relative;
+  width: 100%;
+  padding: 120px 5% 150px;
+  background: url('image2.png') no-repeat center/cover;
+  min-height: 100vh;
+  color: white;
+  font-family: "Poppins", serif;
+}
+
+/* Title */
+.about-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 80px;
+  text-align: center;
+  margin: 0;
+  margin-top: 20px;
+  color: #d3b4a6;
+  font-weight: 700;
+}
+
+.about-sub {
+  text-align: center;
+  margin-top: -40px;
+  font-size: 38px;
+  letter-spacing: 3px;
+  font-family: "Playfair Display", serif;
+}
+
+/* Layout */
+.about-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 40px;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+
+/* Left Text Area */
+.about-content {
+  width: 45%;
+}
+
+.about-content h1 {
+  font-size: 40px;
+  font-family: "Dancing Script", cursive;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.about-btn {
+  padding: 12px 25px;
+  background: #d39bff;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.about-btn:hover {
+  background: #e9c4ff;
+}
+
+/* Right Images */
+.about-images {
+  position: relative;
+  width: 30%;
+}
+
+.img-box {
+  border: 10px solid white;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.img1 {
+  width: 370px;
+}
+
+.img2 {
+  width: 200px;
+  position: absolute;
+  right: -100px;
+  bottom: 50px;
+  border: 10px solid white;
+}
+
+.img-box img {
+  width: 100%;
+  display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content, .about-images {
+    width: 100%;
+  }
+  .about-images{
+    position: relative;
+  }
+  .img1 {
+    margin: auto;
+  }
+
+  .img2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-title {
+    font-size: 50px;
+  }
+
+  .about-sub {
+    font-size: 22px;
+  }
+
+  .about-content h1 {
+    font-size: 30px;
+  }
+
+  .img1 {
+    width: 270px;
+  }
+
+  .img2 {
+    width: 180px;
+  }
+}
+
+
+/* ================================================================= */
+/*
+  service setcion
+*/
+/* ================================================================= */
+
+.services-section {
+    padding: 80px 5%;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+.content h3{
+  color:goldenrod;
+}
+.content h2{
+  color:goldenrod;
+}
+.txt1 {
+    font-size: 70px;
+    font-family: "Cormorant Garamond", serif;
+    color: #d3b4a6;
+    margin-bottom: 0;
+}
+
+.txt2 {
+    margin-top: -30px;
+    letter-spacing: 4px;
+     font-size: 30px;
+}
+
+.services-container {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+/* CARD */
+.service-card {
+    width: 250px;
+    height: 350px;
+    perspective: 1200px;
+}
+
+/* Inner Flip Box */
+.flip-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+}
+
+/* Flip Effect X-Axis */
+.service-card:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front & Back */
+.flip-front, 
+.flip-back {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* FRONT */
+.flip-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flip-front .overlay {
+    position: absolute;
+    inset: 0;
+}
+
+.flip-front .label {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 38px;
+    color: #f3dacd;
+    font-family: "Playfair Display", serif;
+    text-shadow: 0px 4px 10px rgba(0,0,0,0.6);
+}
+
+/* BACK */
+.flip-back {
+    background: #1b0f19;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.flip-back .content {
+    text-align: left;
+}
+
+.flip-back ul {
+    margin: 15px 0;
+}
+
+.flip-back button {
+    background: #d39bff;
+    padding: 10px 22px;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .service-card {
+        width: 90%;
+        height: 420px;
+    }
+
+    .flip-front .label {
+        font-size: 28px;
+    }
+}
+
+/* ================================================================= */
+/*
+  Portfoilio setcion
+*/
+/* ================================================================= */
+/* ---------- Portfolio Section ---------- */
+.portfolio-section {
+  text-align: center;
+  padding: 80px 20px;
+  background: url('image3.png') no-repeat center/cover;
+  color: #fff;
+}
+
+.taxt1 {
+  font-size: 70px;
+  font-family: 'Dancing Script', cursive;
+  color: #caa38a;
+  margin-bottom: -20px;
+}
+
+.taxt2 {
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-top: -35px;
+}
+
+.subtitle {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+/* ---------- Infinite Slider ---------- */
+.slider {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.slide-track {
+  display: flex;  
+  gap: 40px;
+  width: calc(370px * 8); /* 10 slides (5 original + 5 duplicate) */
+  animation: scroll 5s linear infinite;
+}
+
+.slide {
+  width: 370px;
+  margin: 0 20px;
+}
+
+.slide img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Animation */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .slide {
+    width: 180px;
+    margin: 0 15px;
+  }
+  .slide img {
+    height: 250px;
+  }
+  .taxt1 {
+    font-size: 50px;
+  }
+  .taxt2 {
+    font-size: 28px;
+  }
+  .subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide {
+    width: 140px;
+    margin: 0 10px;
+  }
+  .slide img {
+    height: 200px;
+  }
+}
+
+/* ================================================================= */
+/*
+  Testimonial setcion
+*/
+/* ================================================================= */
+/* Section Layout */
+.testimonial-section {
+  text-align: center;
+  color: white;
+  padding: 100px 20px;
+  background: #000;
+}
+
+/* Title Styling */
+.axt1 {
+  font-family: 'Parisienne', cursive;
+  font-size: 70px;
+  font-weight: 400;
+  color: #c79b7b;
+  margin: 0;
+}
+
+.axt2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: -35px;
+  color: #fff;
+  letter-spacing: 3px;
+}
+
+.sub-text {
+  font-family: 'Dancing Script', cursive;
+  font-size: 28px;
+  margin-top: 20px;
+  color: #fff;
+}
+
+/* Testimonial Boxes */
+.testimonial-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+
+.testimonial-box {
+  background: linear-gradient(145deg, #2d1046, #190726);
+  padding: 40px 30px;
+  width: 340px;
+  border-radius: 40px;
+  text-align: left;
+  position: relative;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease;
+}
+
+/* Hover Effect */
+.testimonial-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.65);
+}
+
+/* Client Image */
+.client-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  top: -40px;
+  left: 30px;
+  border: 4px solid white;
+}
+
+/* Client Name */
+.testimonial-box h3 {
+  margin-top: 50px;
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+}
+
+/* Stars */
+.stars {
+  font-size: 18px;
+  color: #ffcc57;
+  margin: 5px 0 15px;
+}
+
+/* Text */
+.testimonial-box p {
+  color: #e2d5f5;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .testimonial-box {
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .axt1 {
+    font-size: 55px;
+  }
+  .axt2 {
+    font-size: 32px;
+  }
+  .sub-text {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-box {
+    width: 100%;
+    padding: 30px 20px;
+  }
+  .client-img {
+    width: 65px;
+    height: 65px;
+    top: -30px;
+  }
+}
+
+/* ================================================================= */
+/*
+  footer setcion
+*/
+/* ================================================================= */
+
+.footer {
+  background: linear-gradient(to right, #1c1b2e, #4c1f62);
+  padding: 60px 5%;
+  color: white;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 230px;
+}
+
+.logo-col {
+  max-width: 350px;
+}
+
+.logo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 38px;
+  color: gold;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.footer-col h3 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.footer p {
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+/* Social Icons */
+.social-links a {
+  color: white;
+  font-size: 22px;
+  margin-right: 18px;
+  transition: 0.3s;
+}
+.social-links a:hover {
+  color: gold;
+}
+
+/* Lists */
+.contact li,
+.course li {
+  list-style: none;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.contact i {
+  color: gold;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-links a {
+    margin: 0 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 3%;
+  }
+
+  .logo {
+    font-size: 30px;
+  }
+}
+
